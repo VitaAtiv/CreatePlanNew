@@ -1,5 +1,6 @@
 import { LOCALSTORAGE_KEY, refs } from "../constans.js";
-import { refs } from "../constans.js";
+import { createCard } from "./createCard.js";
+
 
 // 7. чому функція онбтнклік знає про додавання карток? крае створити окрему функцію
 export function handleAddCard(card) {

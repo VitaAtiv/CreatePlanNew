@@ -2,9 +2,9 @@
 import "./style.css";
 
 
+
 import { createCardList } from "./js/createCardList.js";
-import { createCardList } from "./js/createCardList.js";
-import { LOCALSTORAGE_KEY, refs } from "../constans.js";
+import { LOCALSTORAGE_KEY, refs } from "./constans.js";
 import { onBtnClick } from "./js/onBtnClick.js";
 
 //  8. ця логіка з функці хенделєдкард
@@ -17,7 +17,7 @@ refs.formToDo.addEventListener("submit", onBtnClick); // прослуховує�
 // 9. тепер треба заповнити ліст тудусами з 8.
 // refs.listEl.innerHTML = todos.join("")
 // 11. тому 
-refs.listEl.innerHTML =  cteateCardList(todos).join("");
+refs.listEl.innerHTML =  createCardList(todos).join("");
 
 
 
