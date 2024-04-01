@@ -1,16 +1,16 @@
+
 import "./style.css";
 
-// 2.
-const LOCALSTORAGE_KEY = "todos"; // створюємо спеціальний ключ, аби дата записати інакше
+
+import { createCardList } from "./js/createCardList.js";
+import { createCardList } from "./js/createCardList.js";
+
+
 //  8. ця логіка з функці хенделєдкард
 const todos = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY)) || [];
 
 
-// 1.
-const refs = {
-  formToDo: document.querySelector(".form-todo"), // знаходимо кнопку
-  listEl: document.querySelector(".list"), //4.аби додати картку, треба знайти список, щоб знати куди додавати нову картку
-};
+
 
 refs.formToDo.addEventListener("submit", onBtnClick); // прослуховуємо кнопку
 // 9. тепер треба заповнити ліст тудусами з 8.
@@ -54,18 +54,8 @@ function handleAddCard(card) {
   console.log(cards);
    localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(cards)); //просто кардс передати не можна це масв, треба перетворити на строку джейсонюстрінгефай
 }
-// 10.
-// якщо в todos отримували масив об'єктів з тайтл і дескріпшин, то тут викликаючи креаткард і передаючи кардс отримуємо масив лішок 
-function cteateCardList (cards) {
-  return cards.map(createCard)
-}
 
-//3. створюємо шаблон майбутньої картки - спочатку його будуємо в штмл а потім переносимо в джаваскрипт через функцію:
-function createCard(card) {
-  return `<li class="list-item">
-        <h2 class="list-item-title">${card.title}</h2>
-        <p class="list-item-description">${card.description}</p>
-      </li>`;
-}
+
+
 
 
