@@ -1,10 +1,6 @@
 
 
 
-
-
-// import { createCardList } from "./js/createCardList.js";
-import { refs } from "./constans.js";
 import { handleInputFilter } from "./js/handleInputFilter.js";
 import { markupList } from "./js/markupList.js";
 import { onBtnClick } from "./js/onBtnClick.js";
@@ -22,8 +18,8 @@ refs.formToDo.addEventListener("submit", onBtnClick); // прослуховує�
 // 9. тепер треба заповнити ліст тудусами з 8.
 // refs.listEl.innerHTML = todos.join("")
 
-console.log(refs.filterTitle);
-refs.filterTitle.addEventListener("input", handleInputFilter);
+
+refs.filterTitle.addEventListener("input", handleInputFilter(todos));
 
 
 

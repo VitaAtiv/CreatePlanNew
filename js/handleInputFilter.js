@@ -1,6 +1,6 @@
 import { markupList } from "./markupList.js";
 
-export const handleInputFilter = (event) => {
+export const handleInputFilter = (todos) => (event) => {
   const { value } = event.currentTarget;
   // or   const a = event.currentTarget.value;
   // const filterTodos = todos.filter((item) => item.title.includes(a));
@@ -9,5 +9,15 @@ export const handleInputFilter = (event) => {
   console.log(filterTodos);
   markupList(filterTodos); // замість цього:
     //   refs.listEl.innerHTML = createCardList(filterTodos).join("");
-    markupList(filterTodos);
+   
 }
+
+
+// or
+/*   export const handleInputFilter = (todos) => {
+    return (event) => {
+  const { value } = event.currentTarget;
+  const filterTodos = todos.filter((item) => item.title.includes(value));
+  markupList(filterTodos);    
+}
+*/
