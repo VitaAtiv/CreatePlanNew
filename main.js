@@ -20,6 +20,15 @@ refs.formToDo.addEventListener("submit", onBtnClick); // прослуховує�
 refs.listEl.innerHTML =  createCardList(todos).join("");
 
 
+console.log(refs.filterTitle);
+refs.filterTitle.addEventListener("input", (event) => {
+    const { value } = event.currentTarget;
+    const filterTodos = todos.filter((item) => item.title.includes(value));
+    console.log(event.currentTarget.value);
+    console.log(filterTodos);
+    refs.listEl.innerHTML = createCardList(filterTodos).join("");
+})
+
 
 
 

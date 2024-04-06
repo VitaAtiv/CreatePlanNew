@@ -7,4 +7,5 @@ export const LOCALSTORAGE_KEY = "todos"; // створюємо спеціаль�
 export const refs = {
   formToDo: document.querySelector(".form-todo"), // знаходимо кнопку
   listEl: document.querySelector(".list"), //4.аби додати картку, треба знайти список, щоб знати куди додавати нову картку
+  filterTitle: document.querySelector(".filter-title"),
 };
