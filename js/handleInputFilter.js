@@ -1,4 +1,6 @@
 import { markupList } from "./markupList.js";
+import { LOCALSTORAGE_KEY, refs } from "../constans.js";
+
 
 export const handleInputFilter = (event) => {
   const { value } = event.currentTarget;
