@@ -19,7 +19,7 @@ refs.formToDo.addEventListener("submit", onBtnClick); // прослуховує�
 // refs.listEl.innerHTML = todos.join("")
 
 
-refs.filterTitle.addEventListener("input", handleInputFilter(todos));
+refs.filterTitle.addEventListener("input", handleInputFilter);
 
 
 
