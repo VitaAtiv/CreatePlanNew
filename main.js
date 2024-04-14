@@ -4,11 +4,12 @@
 import { handleInputFilter } from "./js/handleInputFilter.js";
 import { markupList } from "./js/markupList.js";
 import { onBtnClick } from "./js/onBtnClick.js";
-import { LOCALSTORAGE_KEY, refs } from "./constans.js";
+import { refs } from "./constans.js";
+import { getCards } from "./js/api.js";
 
 import "./style.css";
 //  8. ця логіка з функці хенделєдкард
-const todos = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY)) || [];
+const todos = getCards();
 
 
 // 11. тому 

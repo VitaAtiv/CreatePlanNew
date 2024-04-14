@@ -1,4 +1,4 @@
-import { LOCALSTORAGE_KEY, refs } from "../constans.js";
+import { refs } from "../constans.js";
 import { createCard } from "./createCard.js";
 
 
@@ -14,5 +14,5 @@ export function handleAddCard(card) {
  
   cards.push(card); // доаємо в цей масив нашу картку
   console.log(cards);
-  localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(cards)); //просто кардс передати не можна це масв, треба перетворити на строку джейсонюстрінгефай
+  setCards(cards);
 }

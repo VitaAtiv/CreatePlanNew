@@ -7,7 +7,7 @@ export const handleInputFilter = (event) => {
   // or   const a = event.currentTarget.value;
   // const filterTodos = todos.filter((item) => item.title.includes(a));
   
-  const todos = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY)) || [];
+  const todos = getCards();
   const filterTodos = todos.filter((item) => item.title.includes(value));
   console.log(event.currentTarget.value);
   console.log(filterTodos);
